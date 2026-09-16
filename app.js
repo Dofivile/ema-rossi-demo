@@ -42,7 +42,7 @@ document.getElementById('metrics').innerHTML=[['Food sales',money(sales),change(
 const weights=period===0?[.11,.12,.15,.2,.24,.18]:[.1,.12,.16,.19,.25,.18];const split=(n,w)=>{let a=w.map(v=>Math.floor(v*n));a[a.length-1]+=n-a.reduce((s,v)=>s+v,0);return a};const days=split(sales,weights),prior=split(previous,[.1,.12,.16,.19,.25,.18]);const max=Math.max(...days,...prior)*1.15;
 document.getElementById('sales-chart').innerHTML=days.map((v,i)=>`<div class="day"><div class="bars"><div class="bar previous" style="height:${prior[i]/max*100}%" title="Prior week: ${money(prior[i])}"></div><div class="bar" style="height:${v/max*100}%" title="Selected week: ${money(v)}"><b>${money(v)}</b></div></div><span class="day-label">${['Tue','Wed','Thu','Fri','Sat','Sun'][i]}</span></div>`).join('');
 document.getElementById('sales-chart').setAttribute('aria-label','Daily sample sales. '+days.map((v,i)=>['Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'][i]+': '+money(v)+', prior week '+money(prior[i])).join('; '));
-document.getElementById('chart-period').textContent=period===0?'September 1–6, 2026 · compared with August 25–30':'August 25–30, 2026 · compared with August 18–23';
+document.getElementById('chart-period').textContent=period===0?'September 8–13, 2026 · compared with September 1–6':'September 1–6, 2026 · compared with August 25–30';
 document.getElementById('strongest').textContent='Saturday led the week · '+money(days[4]);
 document.getElementById('focus-copy').textContent=`${items[4].qty[period]} plates sold in this sample week. Check its contribution against your other dishes, then test a server recommendation.`;
 document.getElementById('penne-margin').textContent=dollars(18-cost(4));
