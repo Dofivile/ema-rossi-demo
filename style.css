@@ -7,3 +7,28 @@ nav button.active:hover{background:#fff0ef;color:#a32926}
 .heading-with-icon{display:flex;align-items:center;gap:10px}.section-icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#fff0ef}.pizza-icon{display:block;flex:none}.focus-pizza{position:absolute;right:8px;bottom:50px;opacity:.14;transform:rotate(-16deg)}.focus-pizza .pizza-icon{width:122px;height:122px}.focus-panel h2,.focus-panel p,.focus-stat,.focus-panel button,.muted-light{position:relative}.dish-name{display:flex;align-items:center;gap:7px}.suggestion-category{display:flex;align-items:center;gap:8px}.suggestion-category .pizza-icon{width:16px;height:16px}.menu-dish{display:flex;align-items:center;gap:8px}.menu-dish small{display:block}
 .suggestion-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.suggestion-buttons button{border:1px solid #ce4542;border-radius:6px;padding:10px 14px;background:#fff0ef;color:#a32926;font-size:14px;font-weight:600}.suggestion-buttons button:hover{background:#ffe4e2}.suggestion-buttons button[data-decision="dismiss"]{background:white;border-color:#ddd;color:#555}.plan-empty{padding:8px 24px 24px;color:#707070;font-size:14px}.restore-suggestions{margin:12px 24px 24px}#weekly-plan-title{font-size:20px}#actions-view .panel-title{flex-wrap:wrap}
 .ui-icon{display:inline-block;flex:none;background:currentColor;mask:var(--icon) center/contain no-repeat;-webkit-mask:var(--icon) center/contain no-repeat;vertical-align:middle}.metric-label{display:flex;align-items:center;gap:8px}.metric-label .ui-icon,.dish-name .ui-icon,.menu-dish .ui-icon,.suggestion-category .ui-icon,.notes .ui-icon{color:var(--brand)}.metric-label{flex-wrap:wrap}.system-suggestion{display:flex;align-items:center;gap:6px;color:#a32926;font-size:12px;margin:-6px 0 18px}.suggestion-card h3{margin-bottom:12px}#actions-view .panel-title h2{display:flex;align-items:center;gap:8px}#actions-view>.panel>.panel-title h2 .ui-icon{color:var(--brand)}.focus-pizza{color:white;bottom:68px;right:18px}.suggestion-stats span{font-size:14px}.suggestion-card>p{font-size:16px}h1,.metric strong{letter-spacing:0}
+
+@media(max-width:600px){
+  .sidebar{padding:14px 16px 12px;position:sticky;top:0;z-index:20}
+  .brand{font-size:20px}.brand-mark{font-size:22px}.brand small{line-height:1.7}
+  nav{margin-top:12px;overflow-x:auto;scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+  nav button{min-width:max-content;min-height:44px;padding:10px 12px}
+  .demo-banner{padding:9px 16px}.demo-banner span{line-height:1.35}
+  main{padding:22px 16px 18px}header{margin-bottom:22px}h1{font-size:29px}
+  .period select{min-height:44px}
+  .metric-grid{grid-template-columns:1fr 1fr;gap:10px}.metric{padding:16px 14px;min-width:0}.metric strong{font-size:25px}.metric small{line-height:1.35;display:block}
+  .focus-panel{display:block;padding:22px 20px}.focus-panel h2{font-size:25px}.focus-number{right:18px}.focus-panel button{min-height:44px;align-items:center}
+  .chart{height:205px;margin-left:10px;margin-right:10px;gap:2px}.bars{width:90%;gap:2px}.chart .day b{font-size:8px}.chart-foot{padding:14px 16px}
+  .panel-title{padding:18px 16px;align-items:flex-start}.panel-title .text-button{min-height:40px}
+  .top-row{grid-template-columns:24px minmax(0,1fr) 82px;gap:8px}.dish-name{align-items:flex-start}.top-value{font-size:13px}
+  .notes article{margin:0 16px}.definition{padding:22px 2px}
+  .table-scroll{overflow:visible}table,tbody,tr,td{display:block;width:100%}thead{display:none}table{white-space:normal}
+  tbody tr{border-top:1px solid var(--line);padding:14px 16px}td{border:0;padding:5px 0;display:flex;justify-content:space-between;gap:14px;text-align:right}td:first-child{display:block;text-align:left;padding-bottom:9px}td::before{font-size:12px;color:var(--muted);text-align:left}td:nth-child(2)::before{content:"Sold"}td:nth-child(3)::before{content:"Price"}td:nth-child(4)::before{content:"Ingredients / plate"}td:nth-child(5)::before{content:"After ingredients / plate"}td:nth-child(6)::before{content:"Total contribution"}td:last-child{justify-content:flex-end;padding-top:10px}td button{min-height:40px;padding:8px 14px}
+  .suggestion-stats{gap:10px}.suggestion-stats strong{font-size:22px}.suggestion-buttons button{min-height:44px;flex:1}.weekly-plan-panel .action{padding:18px 16px}
+  #progress-label{width:100%}dialog{padding:22px 18px}.primary{min-height:46px}
+  #toast{width:calc(100% - 32px);bottom:16px;text-align:center}
+}
+
+@media(max-width:360px){
+  .metric-grid{grid-template-columns:1fr}.suggestion-stats{grid-template-columns:1fr}.chart .day b{display:none}
+}
